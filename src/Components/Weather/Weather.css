@@ -1,0 +1,20 @@
+.weatherApp {
+  width: 420px;
+  margin: 0 auto;
+  background: url("../../assets/cold-bg.jpg") no-repeat bottom/cover;
+  transition: 0.4s ease-out;
+}
+
+.weatherApp.warm {
+  background-image: url("../../assets/warm-bg.jpg");
+}
+
+.main {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+  padding: 25px;
+}

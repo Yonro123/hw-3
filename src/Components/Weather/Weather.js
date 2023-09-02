@@ -18,7 +18,7 @@ export default function Weather() {
       }
     >
       <div className="main">
-        <WeatherForm setWeather={setWeather} />
+        <WeatherForm weather={weather} setWeather={setWeather} />
         <WeatherContent weather={weather} />
       </div>
     </div>

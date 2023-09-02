@@ -9,7 +9,7 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
-export default function WeatherForm({ setWeather }) {
+export default function WeatherForm({ weather, setWeather }) {
   const [query, setQuery] = useState("");
 
   const search = async (event) => {
@@ -36,6 +36,9 @@ export default function WeatherForm({ setWeather }) {
         value={query}
         onKeyPress={search}
       />
+      {weather.cod === "404" ? (
+        <span className="search-error">Город не найден!</span>
+      ) : null}
     </div>
   );
 }
